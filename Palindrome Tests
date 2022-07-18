@@ -1,0 +1,41 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		String str = "Mr.Owl ate my metal wormr";
+		String str1 = str.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
+		System.out.println(str1);  
+        // To reverse the string
+		String str2 = new StringBuffer(str1).reverse().toString();
+		System.out.println(str2);  
+		int count=0,i=0;
+		int length = str1.length();
+		System.out.println(length);
+		while(i<length)
+		{
+ 
+			if (str1.charAt(i) == str2.charAt(i))
+			{
+			count ++;
+			System.out.println("count is:"+ count);
+ 
+			}
+			System.out.println("i is:"+ i);
+			i++;
+ 
+		}
+ 
+		if (count == length)
+ 
+			System.out.println("palindrome");    
+		else 
+ 
+		System.out.println("Not a palindrome "); 
+ 
+	}
+}
